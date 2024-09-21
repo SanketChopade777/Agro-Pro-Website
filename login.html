@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- site metas -->
+    <title>Agro-Pro | Login | Team Indra</title>
+    <!-- fevicon -->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <!-- style -->
+    <link rel="stylesheet" href="./css/style_login.css">
+</head>
+<body>
+    <!-- loader -->
+    <div class="loader_bg">
+        <div class="loader"><img src="images/loading.gif" alt="#"/></div>
+     </div>
+     <script>
+        // Hide loader after page load
+        window.addEventListener("load", function(){
+            document.querySelector(".loader_bg").style.display = "none";
+        });
+    </script>
+     <!-- end loader -->
+
+    <!-- translator-start -->
+    <div class="translator">
+        <ul>
+            <li>
+            <div id="google_element"></div>
+            <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+            <script>
+            function loadGoogleTranslate(){
+                new google.translate.TranslateElement("google_element");
+            }
+            </script>
+            </li>
+        </ul>
+    </div>
+    <!-- translator-ends -->
+    <!-- Logo Section -->
+    <div class="logo">
+        <a href="index.html" class="agro">Agro<span>-Pro</span></a>
+    </div>
+
+    <!-- Login Page -->
+    <div class="login_page">
+        <div class="outer_box">
+            <form action="#">
+                <h3 class="login_name">Login</h3>
+
+                <!-- Username Input -->
+                <input type="text" name="username" id="username" placeholder="Username">
+                
+                <!-- Password Input with Eye Icon -->
+                <div class="password-container">
+                    <input type="password" name="password" id="password" placeholder="Password">
+                    <span class="toggle-password" onclick="togglePasswordVisibility()">
+                        <i id="eyeIcon" class="fa fa-eye"></i> <!-- FontAwesome icon -->
+                    </span>
+                </div>
+
+                <!-- Forgot Password -->
+                <a href="#" class="forget_pass">Forgot password?</a>
+
+                <!-- Sign In Button -->
+                <button type="submit">Sign In</button>
+
+                <!-- Register Section -->
+                <br><br>
+                Not registered yet? Register now
+                <a href="./registration.html" class="btn">Register</a>
+                <br>
+            </form>
+        </div>
+    </div>
+
+    <!-- FontAwesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <!-- JavaScript for toggling password visibility -->
+    <script>
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById("password");
+            var eyeIcon = document.getElementById("eyeIcon");
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                eyeIcon.classList.remove("fa-eye");
+                eyeIcon.classList.add("fa-eye-slash");
+            } else {
+                passwordInput.type = "password";
+                eyeIcon.classList.remove("fa-eye-slash");
+                eyeIcon.classList.add("fa-eye");
+            }
+        }
+    </script>
+</body>
+</html>

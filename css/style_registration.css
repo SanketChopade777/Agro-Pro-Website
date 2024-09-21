@@ -1,0 +1,154 @@
+/* Basic Styling */
+.loader_bg {
+    position: fixed;
+    z-index: 9999;
+    background: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader img {
+    width: 150px;
+}
+
+.loader_bg.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+* {
+    box-sizing: border-box !important;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #121111;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+    font-weight: normal;
+    background-color: rgba(240, 244, 247, 0.8);
+    background-image: url("../images/chose.jpg");
+    background-size: contain;
+    height: 100vh;
+    align-items: center;
+}
+
+/* translator_styling */
+.translator{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.logo{
+    display: inline-block;
+    background-color:rgba(240, 244, 247, 0.8);
+    /* margin-top: 35px; */
+    border-radius: 10px;
+    padding:10px;
+    margin-bottom:10px;
+    margin-left:10px;
+}
+.logo a {
+    color: #1c1c1b;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding:20px;
+    text-decoration: none;
+}
+
+.logo:hover{
+    text-decoration-line: underline;
+    text-decoration-thickness: 3px;
+}
+
+.logo a span {
+    color: #6b7908;
+}
+
+/* Form Styling */
+.registration_form {
+    background-color:rgba(240, 244, 247, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px; /* Increased form width */
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #6b7908;
+    padding: 5px;
+    margin-bottom:5px;
+}
+
+/* Inline grouping of fields */
+.form_group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form_group.inline {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 48%;
+}
+
+.form_group label {
+    flex-basis: 30%;
+    padding: 10px 0;
+    font-weight: bold;
+}
+
+.form_group input,
+.form_group select {
+    flex-basis: 65%;
+    padding: 8px;
+    border: 1px solid rgba(240, 244, 247, 0.8);
+    border-radius: 5px;
+}
+
+.full-width {
+    flex-basis: 100%;
+}
+
+button {
+    background-color: #6b7908;
+    color:rgba(240, 244, 247, 0.8);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #4f5e05;
+}
+
+.form_buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form_group.inline {
+        flex-basis: 100%;
+    }
+
+    .registration_form {
+        max-width: 100%;
+    }
+}
