@@ -37,78 +37,57 @@
    
       <div class="full_bg">
          <!-- header -->
-      <header class="header-area" id="main-header">
-         <div class="container-fluid">
-            <div class="row d_flex">
-               <div class="col-md-2 col-sm-3">
-                  <div class="logo">
-                     <a href="index.html" class="team_logo" style="margin-top: 0px; padding-left: 0px;">
-                        <img src="./images/favicon.png" alt="#">
-                     </a>
-                     <span class="team-name">Team INDRA</span>
+         <header class="header-area" id="main-header">
+            <div class="container-fluid">
+               <div class="row d_flex">
+                  <div class="col-md-2 col-sm-3">
+                     <div class="logo">
+                        <a href="index.html" class="team_logo" style="margin-top: 0px; padding-left: 0px;">
+                           <img src="./images/favicon.png" alt="#">
+                        </a>
+                        <span class="team-name">INDRA</span>
+                     </div>
                   </div>
-               </div>
-               <div class="col-md-8 col-sm-9">
-                  <div class="navbar-area">
-                     <nav class="site-navbar">
-                        <ul>
-                           <li><a class="active" href="index.html">Home</a></li>
-                           <li><a href="about.html">About</a></li>
-                           <li><a href="service.html">Service</a></li>
-                           <li><a href="Javascript:void(0)">Projects</a></li>
-                           <li><a href="testimonail.html">Testimonail</a></li>
-                           <li><a href="blog.html">Blog</a></li>
-                           <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                        <button class="nav-toggler"><span></span></button>
-                     </nav>
+                  <div class="col-md-8 col-sm-9">
+                     <div class="navbar-area">
+                        <nav class="site-navbar">
+                           <ul>
+                              <li><a class="active" href="index.html">Home</a></li>
+                              <li><a href="about.html">About</a></li>
+                              <li><a href="service.html">Service</a></li>
+                              <li><a href="https://plant-disease-classifier-agropro-team-indra.streamlit.app/">Projects</a></li>
+                              <li><a href="testimonail.html">Testimonail</a></li>
+                              <li><a href="blog.html">Blog</a></li>
+                              <li><a href="contact.html">Contact</a></li>
+                           </ul>
+                           <button class="nav-toggler"><span></span></button>
+                        </nav>
+                     </div>
                   </div>
-               </div>
-               <div class="col-md-2 padd_0">
-                  <ul class="email text_align_right">
-                     <li class="login_button"><a href="./login.html">Login</a></li>
-                     <li>
-                        <!-- Search Option -->
-                        <input type="text" id="search-query" placeholder="Search..." autocomplete="off">
-                        <div id="search-results"></div>
-                     </li>
-                  </ul>
-               
-                  <script>
-                     document.getElementById('search-query').addEventListener('input', function() {
-                        let query = this.value;
-                        if (query.length > 2) { // Trigger search only if the query is longer than 2 characters
-                           fetch('your-api-or-search-endpoint?q=' + query)
-                              .then(response => response.json())
-                              .then(data => {
-                                 // Process and display search results
-                                 let resultsDiv = document.getElementById('search-results');
-                                 resultsDiv.innerHTML = ''; // Clear previous results
-                                 data.results.forEach(result => {
-                                    let resultElement = document.createElement('div');
-                                    resultElement.innerHTML = `<a href="${result.url}">${result.title}</a>`;
-                                    resultsDiv.appendChild(resultElement);
-                                 });
-                              });
-                        }
-                     });
-                  </script>
-
-                  <ul>
-                     <li>
-                        <div id="google_element"></div>
-                        <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
-                        <script>
-                        function loadGoogleTranslate(){
-                           new google.translate.TranslateElement("google_element");
-                        }
-                        </script>
-                     </li>
-                  </ul>
+                  <div class="col-md-2 padd_0">
+                     <ul class="email text_align_right hide-on-small-screen">
+                        <li class="login_button"><a href="./login.html">Login</a></li>
+                        <li>
+                           <input type="text" id="search-query" placeholder="Search..." autocomplete="off">
+                           <div id="search-results"></div>
+                        </li>
+                     </ul>
+                     <ul>
+                        <li>
+                           <div id="google_element"></div>
+                           <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+                           <script>
+                              function loadGoogleTranslate() {
+                                 new google.translate.TranslateElement("google_element");
+                              }
+                           </script>
+                        </li>
+                     </ul>
+                  </div>
                </div>
             </div>
-         </div>
-      </header>
+         </header>
+         
       <!-- end header -->
          <!-- top -->
          <div class="slider_main">
@@ -168,7 +147,7 @@
                               <div class="row">
                                  <div class="col-md-12">
                                     <div class="willom">
-                                      <h1> Agriculture Fram</h1>
+                                      <h1> Agriculture Farm</h1>
                                     </div>
                                  </div>
                               </div>
@@ -229,7 +208,7 @@
                            <p>Wondering which fertilizer is best for your crops? Our Fertilizer Recommendation tool takes into account your soil type, crop needs, and nutrient levels to provide the perfect fertilizer suggestions. Click the button below to get customized recommendations and ensure healthy, thriving crops!</p>
                         </div>
                      </div>
-                     <a class="read_more" href="services.html">Go &rarr;</a>
+                     <a class="read_more" href="https://fertilizer-recommendation-system-4q39.onrender.com">Go &rarr;</a>
                   </div>
                </div>
                <div class="col-md-4">
@@ -241,7 +220,7 @@
                            <p>Unsure which crops to plant for the best yield? Our Crop Recommendation tool analyzes your soil, climate, and preferences to suggest the most suitable crops for your region. Click the button below to explore tailored recommendations and maximize your farming success!</p>
                         </div>
                      </div>
-                     <a class="read_more" href="https://web-production-b382.up.railway.app/">Go &rarr;</a>
+                     <a class="read_more" href="https://crop-recommendation-system-4l8x.onrender.com">Go &rarr;</a>
                   </div>
                </div>
                <div class="col-md-4">
@@ -253,7 +232,7 @@
                               <p>Need farming advice at your fingertips? AgroChat is here to help! Our intelligent chatbot analyzes your queries, soil conditions, and climate data to offer personalized crop recommendations and best practices. Start a conversation below to receive expert guidance and boost your farming productivity!</p>
                            </div>
                         </div>
-                        <a class="read_more" href="services.html">Go &rarr;</a>
+                        <a class="read_more" href="https://agro-chat-agro-pro-team-indra.streamlit.app/">Go &rarr;</a>
                      </div>
                   </div>
             </div>
@@ -289,60 +268,26 @@
                            <div class="col-md-6">
                               <div class="custom">
                                  <div class="d_flex">
-                                    <i><img src="images/customer1.jpg" alt="#"/></i>
+                                    <i><img src="images/customer/customer_1.jpg" alt="#"/></i>
                                     <div class="clint">
-                                      <h4>Dan Balan</h4>
-                                      <span>Farmer</span>
+                                      <h4>Satish Mangore</h4>
+                                      <span>Farmer, Koge, Mahrastra</span>
                                     </div>
                                  </div>
-                                  <p>readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their </p>
+                                  <p>"AgroPro has completely transformed the way I approach farming. The crop recommendation system helped me identify the best crops for my land, and the results have been amazing. My yield has doubled this season!"</p>
                                   <img src="images/test.png" alt="#"/>
                               </div>
                            </div>
                            <div class="col-md-6">
                               <div class="custom">
                                  <div class="d_flex">
-                                    <i><img src="images/customer2.jpg" alt="#"/></i>
+                                    <i><img src="images/customer/customer_2.jpg" alt="#"/></i>
                                     <div class="clint">
-                                      <h4>Mor Balan</h4>
-                                      <span>Farmer</span>
+                                      <h4>Maruti Patil</h4>
+                                      <span>Farmer, Kolhapur, Mahrastra</span>
                                     </div>
                                  </div>
-                                  <p>readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their </p>
-                                  <img src="images/test.png" alt="#"/>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="carousel-item">
-                  <div class="container">
-                     <div class="carousel-caption relative">
-                       <div class="row d_flex">
-                           <div class="col-md-6">
-                              <div class="custom">
-                                 <div class="d_flex">
-                                    <i><img src="images/customer1.jpg" alt="#"/></i>
-                                    <div class="clint">
-                                      <h4>Dan Balan</h4>
-                                      <span>Farmer</span>
-                                    </div>
-                                 </div>
-                                  <p>readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their </p>
-                                  <img src="images/test.png" alt="#"/>
-                              </div>
-                           </div>
-                           <div class="col-md-6">
-                              <div class="custom">
-                                 <div class="d_flex">
-                                    <i><img src="images/customer2.jpg" alt="#"/></i>
-                                    <div class="clint">
-                                      <h4>Mor Balan</h4>
-                                      <span>Farmer</span>
-                                    </div>
-                                 </div>
-                                  <p>readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their </p>
+                                  <p>"As a small farmer, I always struggled to make decisions about fertilizers. The fertilizer recommendation system is a game-changer. It provided me with accurate suggestions, and I saw a noticeable improvement in my crop quality."</p>
                                   <img src="images/test.png" alt="#"/>
                               </div>
                            </div>
@@ -357,26 +302,60 @@
                            <div class="col-md-6">
                               <div class="custom">
                                  <div class="d_flex">
-                                    <i><img src="images/customer1.jpg" alt="#"/></i>
+                                    <i><img src="images/customer/customer_3.jpg" alt="#"/></i>
                                     <div class="clint">
-                                      <h4>Sanket Chopade</h4>
-                                      <span>Farmer</span>
+                                      <h4>Ramesh Patil</h4>
+                                      <span>Farmer, Fulewadi, Mahrastra</span>
                                     </div>
                                  </div>
-                                  <p>readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their </p>
+                                  <p>"The plant disease classifier saved my tomato crop! I uploaded a photo, and within seconds, I knew exactly what disease it was and how to treat it. AgroPro is a must-have for every farmer."</p>
                                   <img src="images/test.png" alt="#"/>
                               </div>
                            </div>
                            <div class="col-md-6">
                               <div class="custom">
                                  <div class="d_flex">
-                                    <i><img src="images/customer2.jpg" alt="#"/></i>
+                                    <i><img src="images/customer/customer_4.jpg" alt="#"/></i>
                                     <div class="clint">
-                                      <h4>Mor Balan</h4>
-                                      <span>Farmer</span>
+                                      <h4>Vithal Mangore</h4>
+                                      <span>Farmer, Koge, Mahrastra</span>
                                     </div>
                                  </div>
-                                  <p>readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their </p>
+                                  <p>"The Agro-Chat feature is so helpful. I can ask questions in my local language, and I always get quick and reliable advice. It feels like having an expert by my side all the time." </p>
+                                  <img src="images/test.png" alt="#"/>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="container">
+                     <div class="carousel-caption relative">
+                       <div class="row d_flex">
+                           <div class="col-md-6">
+                              <div class="custom">
+                                 <div class="d_flex">
+                                    <i><img src="images/customer/customer_5.jpg" alt="#"/></i>
+                                    <div class="clint">
+                                      <h4>Nivas Chopade</h4>
+                                      <span>Farmer, Majegaon, Mahrastra</span>
+                                    </div>
+                                 </div>
+                                  <p>"Farming used to feel overwhelming, but with AgroPro, I now have all the information I need at my fingertips. The multilingual support makes it so easy to use, even for someone like me who isn’t fluent in English."</p>
+                                  <img src="images/test.png" alt="#"/>
+                              </div>
+                           </div>
+                           <div class="col-md-6">
+                              <div class="custom">
+                                 <div class="d_flex">
+                                    <i><img src="images/customer/customer_6.jpg" alt="#"/></i>
+                                    <div class="clint">
+                                      <h4>Sumit Patil</h4>
+                                      <span>Farmer, Punal, Mahrastra</span>
+                                    </div>
+                                 </div>
+                                  <p>"Thanks to AgroPro, I’ve adopted smarter, more sustainable farming practices. The insights provided are not only improving my yield but also helping me conserve resources like water and fertilizers."</p>
                                   <img src="images/test.png" alt="#"/>
                               </div>
                            </div>
@@ -402,15 +381,15 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="titlepage text_align_center">
-                     <h2>Whay choose us</h2>
+                     <h2>Why choose us</h2>
                   </div>
                </div>
             </div>
             <div class="row">
                <div class="col-md-3">
                   <div class="point text_align_center">
-                     <h3>300+</h3>
-                     <span>Regula <br>Customers</span>
+                     <h3>30+</h3>
+                     <span>Regular <br>Customers</span>
                   </div>
                </div>
                <div class="col-md-3">
@@ -421,13 +400,13 @@
                </div>
                <div class="col-md-3">
                   <div class="point text_align_center">
-                     <h3>300+</h3>
+                     <h3>30+</h3>
                      <span>Points of Sale  <br>Goods</span>
                   </div>
                </div>
                <div class="col-md-3">
                   <div class="point text_align_center">
-                     <h3>30+</h3>
+                     <h3>10+</h3>
                      <span>Awards <br>Won</span>
                   </div>
                </div>
@@ -487,15 +466,16 @@
       <!-- contact -->
       <div class="contact">
          <div class="container">
-            <div class="row">
-               <div class="col-md-12 ">
-                  <div class="titlepage text_align_center">
-                     <span>Our Contact</span>
-                     <h2>Requste A Call Back</h2>
-                  </div>
+            <div class="col-md-12 ">
+               <div class="titlepage text_align_left">
+                   <span>Our</span>
+                  <h2>Location</h2>
                </div>
-               <div class="col-md-8 offset-md-2">
-                  <form id="request" class="main_form">
+            </div>
+            <!-- <div class="row"> -->
+               
+               <!-- <div class="col-md-8 offset-md-2"> -->
+                  <!-- <form id="request" class="main_form">
                      <div class="row">
                         <div class="col-md-12 ">
                            <input class="form_control" placeholder="Your Name" type="type" name=" Name"> 
@@ -514,9 +494,10 @@
                          </div>
                         </div>
                      </div>
-                  </form>
-               </div>
-            </div>
+                  </form> -->
+               <!-- </div>  -->
+                <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc8CTxaNkFQNbM3wNwBgka7zZcyZBeODQAUuX6f287rz75NQQ/viewform?embedded=true" width="1000" height="1200" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
+            </div> 
          </div>
           <div class="map-responsive">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3809.124196805417!2d74.18464267492001!3d17.30955578356443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc1826400000001%3A0x34bdd98ca25093e3!2sGovernment%20College%20of%20Engineering%2C%20Karad!5e0!3m2!1sen!2sin!4v1726553777142!5m2!1sen!2sin" width="600" height="430" frameborder="0" style="border:0; width: 100%;" allowfullscreen=""></iframe>
@@ -545,7 +526,7 @@
                                  <li><a href="index.html">Home</a></li>
                                  <li><a href="about.html">About</a></li>
                                  <li><a href="service.html">Service</a></li>
-                                 <li><a href="Javascript:void(0)">Projects</a></li>
+                                 <li><a href="https://plant-disease-classifier-agropro-team-indra.streamlit.app/">Projects</a></li>
                                  <li><a href="testimonail.html">Testimonail</a></li>
                                  <li><a href="contact.html">Contact us</a></li>
                               </ul>
@@ -581,7 +562,7 @@
                <div class="container">
                   <div class="row d_flex">
                      <div class="col-md-8">
-                        <p>© 2024 All Rights Reserved. Design by <a href="#"> Team Indra</a></p>
+                        <p id="copyright-tab">© 2024 All Rights Reserved. Design by <a href="#"> Team Indra</a></p>
                      </div>
                      <div class="col-md-4">
                            <ul class="social_icon ">

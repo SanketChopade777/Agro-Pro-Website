@@ -224,9 +224,9 @@ button {
     padding: 0;
 }
 
-.titlepage {
+/* .titlepage {
     padding-bottom: 50px;
-}
+} */
 .titlepage span  {
     font-size: 24px;
     color: #6b7908;
@@ -237,7 +237,7 @@ button {
     text-transform: uppercase;
 }
 .titlepage h2 {
-    font-size: 50px;
+    font-size: 45px;
     color: #999998;
     line-height: 50px;
     font-weight: bold;
@@ -352,12 +352,12 @@ button {
     white-space: nowrap;
     border-right: 2px solid white;
     width: 0;
-    animation: typing 10s steps(12) 1 normal forwards, blink-caret 0.75s step-end infinite;
+    animation: typing 10s steps(10) 1 normal forwards, blink-caret 0.75s step-end infinite;
 }
 
 @keyframes typing {
     from { width: 0; }
-    to { width: 120px; }
+    to { width: 55px; }
 }
 
 @keyframes blink-caret {
@@ -455,7 +455,7 @@ element.style{
     padding: 5px;
     background-color: transparent;
     cursor: pointer;
-    height: 39px;
+    height: 35px;
     display: none;
     z-index: 99999;
 }
@@ -737,6 +737,7 @@ header {
 .about_img figure img {
     transition: ease-in all 0.5s; 
     border-radius: 5px;
+    margin-top:10px;
 }
 
 .about .titlepage {
