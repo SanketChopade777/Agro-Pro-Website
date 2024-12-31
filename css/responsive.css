@@ -52,6 +52,14 @@ File Name: responsive.css
         justify-content: center;
     }
 
+    #banner1 .carousel-item img{
+        height: 80vh;
+    }
+
+    .willom h1 {
+        margin-left: 10px;
+        /* padding: 22px 44px; */
+    }
     /* .goog-te-gadget{
         position: absolute;
     }  */
@@ -73,6 +81,10 @@ File Name: responsive.css
     }
     .willom h1 {
         margin-left:30px;
+        padding: 22px 44px;
+    }
+    #banner1 .carousel-item img{
+        height: 70vh;
     }
     
 }
@@ -80,6 +92,7 @@ File Name: responsive.css
 @media (max-width: 400px){
     .willom h1 {
         margin-left: 10px;
+        /* padding: 22px 44px; */
     }
     .nav-toggler {
         position: absolute;
@@ -97,6 +110,11 @@ File Name: responsive.css
     #copyright-tab{
         position: relative;
         right:120px;
+    }
+
+    .willom h1 {
+        margin-left: 10px;
+        /* padding: 22px 44px; */
     }
     
 }
