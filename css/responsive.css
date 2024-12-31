@@ -81,7 +81,7 @@ File Name: responsive.css
     }
     .willom h1 {
         margin-left:30px;
-        padding: 22px 44px;
+        /* padding: 22px 44px; */
     }
     #banner1 .carousel-item img{
         height: 70vh;
