@@ -18,7 +18,7 @@ Follow the tutorial video below for a comprehensive walkthrough on how to use Ag
   [How to Use AgroPro - Video Tutorial](https://www.youtube.com/watch?v=MxAH505KqQE&t=22s) 🎬
 
 - **Download the AgroPro app**:  
-  [AgroPro APK](https://apkpure.com/agro-pro/com.example.agro_pro) 📲
+  [AgroPro APK](https://apkpure.com/agropro/com.example.agro_pro) 📲
 
 - **Visit the AgroPro Website**:  
   [AgroPro Website](https://teamindra-agro-pro.netlify.app/) 🌐
