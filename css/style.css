@@ -1050,7 +1050,7 @@ strong {
     width: 79px;
     height: 68px;
     margin: 0 auto;
-    z-index: 999999;
+    /* z-index: 999999; */
     line-height: 15px;
     color: #fff;
     top: 30px;
@@ -1353,3 +1353,53 @@ ul.social_icon li a i:hover {
 }
 
 .about_page .about, .service_page .services, .blog_page .news {padding-bottom: 90px;} 
+/* rgb(116, 216, 16); */
+
+/* sticky circular button styles */
+.sticky-circle-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10000000000;
+  }
+  
+  .sticky-circle-button a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #4CAF50; /* Vibrant green for agriculture */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%; /* Circle */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+  }
+  
+  .sticky-circle-button a:hover {
+    width: 160px;
+    height: 50px; /* Keep consistent height */
+    border-radius: 25px; /* Smoothly transition to rounded rectangle */
+    background-color: #6A994E; /* Earthy green for hover effect */
+  }
+  
+  .sticky-circle-button a .button-text {
+    transition: all 0s ease-in-out;
+  }
+  
+  .sticky-circle-button a .button-text::before {
+    content: "?"; /* Initial '?' displayed */
+  }
+  
+  .sticky-circle-button a:hover .button-text::before {
+    content: "How to Use ?"; /* Change to full text on hover */
+    text-align: center; /* Ensure the text stays centered */
+    font-size: 16px; /* Slightly smaller font for consistency */
+  }
+  
