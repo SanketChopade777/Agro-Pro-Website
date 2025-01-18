@@ -5,11 +5,15 @@
 AgroPro is an innovative web-based platform designed to support farmers by integrating advanced technologies into the agricultural process. Developed by Team Indra, this platform provides valuable solutions for modern farming, offering features like crop and fertilizer recommendations, plant disease classification, and an interactive chat system. With support for multilingual functionality, AgroPro makes it easier for farmers from different regions to access and benefit from these technologies. 🌍💻
 
 ## Key Features: 🚜💡
-- **Crop Recommendation System**: Recommends the best crops for a specific location and conditions. 🌱🌾
-- **Fertilizer Recommendation System**: Provides optimal fertilizer suggestions to improve crop yield. 💧🌾
-- **Plant Disease Classifier**: Identifies plant diseases using machine learning models for quick diagnosis. 🔬🌿
-- **Agro-Chat**: An interactive chatbot that provides real-time assistance to farmers. 🤖💬
+
+- **Crop Recommendation System**: Recommends the best crops for a specific location and conditions. 🌱🌾  
+- **Fertilizer Recommendation System**: Provides optimal fertilizer suggestions to improve crop yield. 💧🌾  
+- **Plant Disease Classifier**: Identifies plant diseases using machine learning models for quick diagnosis. 🔬🌿  
+- **Agro-Chat**: An interactive chatbot that provides real-time assistance to farmers. 🤖💬  
+- **WeatherWise**: Delivers accurate weather forecasts and real-time updates, empowering farmers to plan effectively and mitigate risks. ☀️🌧️  
+- **TrackMate**: Enables real-time location tracking for monitoring assets, vehicles, or personnel, ensuring safety and efficiency. 📍🗺️  
 - **Multilingual Support**: Using Google Translator API, AgroPro is accessible to a diverse audience. 🌐💬
+
 
 ## Getting Started: 🚀
 Follow the tutorial video below for a comprehensive walkthrough on how to use AgroPro’s app and website. The tutorial covers all the features in detail, helping you make the most out of the platform. 🎥👇
