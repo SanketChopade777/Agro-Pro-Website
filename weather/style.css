@@ -51,7 +51,7 @@ input {
     font-size: 15px;
 }
 
-button:hover {
+#weather_button:hover {
     background: #4CAF50;
 }
 
