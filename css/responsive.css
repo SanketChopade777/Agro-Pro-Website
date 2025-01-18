@@ -103,6 +103,7 @@ File Name: responsive.css
 
 @media (max-width: 1200px){
     .goog-te-gadget{
+        z-index: 100;
         position: relative;
         left: 150px;
     } 
