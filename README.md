@@ -2,7 +2,13 @@
 
 **README Description:**
 
-AgroPro is an innovative web-based platform designed to support farmers by integrating advanced technologies into the agricultural process. Developed by Team Indra, this platform provides valuable solutions for modern farming, offering features like crop and fertilizer recommendations, plant disease classification, and an interactive chat system. With support for multilingual functionality, AgroPro makes it easier for farmers from different regions to access and benefit from these technologies. 🌍💻
+AgroPro is an innovative web-based platform designed to empower farmers by integrating advanced technologies into the agricultural process. Developed by Team Indra, AgroPro offers intelligent solutions to enhance farming efficiency and productivity.
+
+With features such as crop and fertilizer recommendations, plant disease classification, and an interactive chatbot, AgroPro simplifies decision-making for farmers. The platform also includes real-time weather updates, asset tracking, and a crop cultivation calculator to help farmers optimize their resources.
+
+Additionally, AgroPro provides a dedicated section for government schemes, offering complete information on available agricultural policies, eligibility criteria, and step-by-step application guidance.
+
+With multilingual support, AgroPro ensures accessibility for farmers across diverse regions, making modern farming technology more inclusive and effective. 🚜🌱💡🌍💻
 
 ## Key Features: 🚜💡
 
@@ -13,6 +19,8 @@ AgroPro is an innovative web-based platform designed to support farmers by integ
 - **WeatherWise**: Delivers accurate weather forecasts and real-time updates, empowering farmers to plan effectively and mitigate risks. ☀️🌧️  
 - **TrackMate**: Enables real-time location tracking for monitoring assets, vehicles, or personnel, ensuring safety and efficiency. 📍🗺️  
 - **Multilingual Support**: Using Google Translator API, AgroPro is accessible to a diverse audience. 🌐💬
+- **Government Schemes & Application Guide**: A dedicated section providing complete information on government agricultural schemes, eligibility criteria, benefits, and step-by-step application guidance. 🏛️📜
+- **Crop Cultivation Calculator:** Helps farmers estimate the number of crops they can cultivate based on their land area, improving resource allocation. 📏🌾
 
 
 ## Getting Started: 🚀

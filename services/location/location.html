@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- favicon -->
+    <link rel="icon" href="../../images/favicon.png" type="image/png">
+    <!-- <link rel="stylesheet" href="weather/style.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <!-- fevicon -->
+    <link rel="icon" href="../../images/favicon.png" type="image/png">
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="../../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="../../css/bootstrap-datepicker.min.css">
+
+    <title>Agro-Pro | TrackMate | Team Indra</title>
+
+    <!-- leaflet css  -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+    <style>
+        body {
+            margin: 0px;
+            padding: 0;
+        }
+
+        #map {
+            margin-top: 9px;
+            width: 100%;
+            height: 100vh;
+        }
+    </style>
+
+</head>
+<body>
+    <body class="main-layout inner_page">
+        <!-- loader  -->
+        <div class="loader_bg">
+           <div class="loader"><img src="../../images/loading.gif" alt="#"/></div>
+        </div>
+        <!-- end loader -->
+        <div class="full_bg">
+           <!-- header -->
+           <header class="header-area">
+              <div class="container-fluid">
+                 <div class="row d_flex">
+                    <div class=" col-md-2 col-sm-3">
+                       <div class="logo">
+                          <a href="../../index.html" class="agro">Agro<span>-Pro</span></a>
+                       </div>
+                    </div>
+                    <div class="col-md-8 col-sm-9">
+                       <div class="navbar-area">
+                          <nav class="site-navbar">
+                             <ul>
+                                <li><a href="../../index.html">Home</a></li>
+                                <li><a href="../../about.html">About</a></li>
+                                <li><a href="../../service.html">Service</a></li>
+                                 <li><a href="https://plant-disease-classifier-agropro-team-indra.streamlit.app/">Projects</a></li>
+                                  <li><a href="../../testimonail.html">Testimonail</a></li>
+                                <li><a href="../../blog.html">Blog</a></li>
+                                <li><a class="active" href="../../contact.html">Contact</a></li>
+                             </ul>
+                             <button class="nav-toggler">
+                             <span></span>
+                             </button>
+                          </nav>
+                       </div>
+                    </div>
+                    <div class="col-md-2 padd_0">
+                       <ul class="email text_align_right">
+                          <li class="login_button"><a href="../.././login.html">Login</a></li>
+                          <li>
+                             <!-- Search Option -->
+                             <input type="text" id="search-query" placeholder="Search..." autocomplete="off">
+                             <div id="search-results"></div>
+                          </li>
+                       </ul>
+                    
+                       <script>
+                          document.getElementById('search-query').addEventListener('input', function() {
+                             let query = this.value;
+                             if (query.length > 2) { // Trigger search only if the query is longer than 2 characters
+                                fetch('your-api-or-search-endpoint?q=' + query)
+                                   .then(response => response.json())
+                                   .then(data => {
+                                      // Process and display search results
+                                      let resultsDiv = document.getElementById('search-results');
+                                      resultsDiv.innerHTML = ''; // Clear previous results
+                                      data.results.forEach(result => {
+                                         let resultElement = document.createElement('div');
+                                         resultElement.innerHTML = `<a href="${result.url}">${result.title}</a>`;
+                                         resultsDiv.appendChild(resultElement);
+                                      });
+                                   });
+                             }
+                          });
+                       </script>
+     
+                       <ul>
+                          <li>
+                             <div id="google_element"></div>
+                             <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+                             <script>
+                             function loadGoogleTranslate(){
+                                new google.translate.TranslateElement("google_element");
+                             }
+                             </script>
+                          </li>
+                       </ul>
+                    </div>
+                 </div>
+              </div>
+           </header>
+           <!-- end header inner -->
+        </div>
+
+    <!-- map container -->
+    <div id="map"></div>
+      
+     <!--  footer -->
+     <footer>
+        <div class="footer">
+           <div class="container">
+              <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                          <div class="hedingh3  text_align_left">
+                           <h3>Schemes for Farmers</h3>
+                           <form id="colof" class="form_subscri" action="../../scheme.html">
+                              <!-- <input class="newsl" placeholder="Enter Email" type="text" name="Email"> -->
+                              <button class="subsci_btn"><img src="../../images/new.png" alt="#"/></button>
+                           </form>
+                             
+                          </div>
+                       </div>
+                       <div class="col-lg-3 col-md-6">
+                          <div class="hedingh3 text_align_left">
+                             <h3> Explore</h3>
+                             <ul class="menu_footer">
+                                <li><a href="../../index.html">Home</a></li>
+                                <li><a href="../../about.html">About</a></li>
+                                <li><a href="../../service.html">Service</a></li>
+                                <li><a href="https://plant-disease-classifier-agropro-team-indra.streamlit.app/">Projects</a></li>
+                                <li><a href="../../testimonail.html">Testimonail</a></li>
+                                <li><a href="../../contact.html">Contact us</a></li>
+                             </ul>
+                          </div>
+                       </div>
+                       <div class="col-lg-3 col-md-6">
+                          <div class="hedingh3 text_align_left">
+                             <h3>Recent Posts</h3>
+                             <ul class="recent">
+                                <li><a href="../../service.html"> &#10095; AIR 3 in Overall Season by Team Indra</a> </li>
+                                <li><a href="../../service.html"> &#10095; AIR 1 - Best Design Award 2024</a> </li>
+                                <li><a href="../../gallery.html"> &#10095; Gallery</a> </li>
+                             </ul>
+                          </div>
+                       </div>
+                        <div class="col-lg-3 col-md-6">
+                          <div class="hedingh3  flot_right text_align_left">
+                             <h3>ContacT</h3>
+                             <ul class="top_infomation">
+                                <li><i class="fa fa-phone" aria-hidden="true"></i>
+                                   +91 8108737426
+                                </li>
+                                <li><i class="fa fa-envelope" aria-hidden="true"></i>
+                                   <a href="Javascript:void(0)">tifan25teamindra@gmail.com</a>
+                                </li>
+                             </ul>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+            
+           <div class="copyright">
+              <div class="container">
+                 <div class="row d_flex">
+                    <div class="col-md-8">
+                       <p id="copyright-tab">© 2024 All Rights Reserved. Design by <a href="#"> Team Indra</a></p>
+                    </div>
+                    <div class="col-md-4">
+                          <ul class="social_icon ">
+                             <li><a href="https://www.linkedin.com/company/team-indra-gcek/mycompany/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                             <li><a href="https://www.instagram.com/team_indra_24/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                             <!-- <li><a href="Javascript:void(0)"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> -->
+                          </ul>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </footer>
+     <!-- end footer -->
+     <!-- Javascript files-->
+      <script src="../../js/weather_page.js"></script>
+     <script src="../../js/jquery.min.js"></script>
+     <script src="../../js/bootstrap.bundle.min.js"></script>
+     <script src="../../js/jquery-3.0.0.min.js"></script>
+     <script src="../../js/owl.carousel.min.js"></script>
+     <script src="../../js/bootstrap-datepicker.min.js"></script>
+     <script src="../../js/custom.js"></script>
+
+     <!-- leaflet js  -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        // Map initialization 
+        var map = L.map('map').setView([14.0860746, 100.608406], 6);
+
+        //osm layer
+        var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        });
+        osm.addTo(map);
+
+        if(!navigator.geolocation) {
+            console.log("Your browser doesn't support geolocation feature!")
+        } else {
+            setInterval(() => {
+                navigator.geolocation.getCurrentPosition(getPosition)
+            }, 5000);
+        }
+
+        var marker, circle;
+
+        function getPosition(position){
+            // console.log(position)
+            var lat = position.coords.latitude
+            var long = position.coords.longitude
+            var accuracy = position.coords.accuracy
+
+            if(marker) {
+                map.removeLayer(marker)
+            }
+
+            if(circle) {
+                map.removeLayer(circle)
+            }
+
+            marker = L.marker([lat, long])
+            circle = L.circle([lat, long], {radius: accuracy})
+
+            var featureGroup = L.featureGroup([marker, circle]).addTo(map)
+
+            map.fitBounds(featureGroup.getBounds())
+
+            console.log("Your coordinate is: Lat: "+ lat +" Long: "+ long+ " Accuracy: "+ accuracy)
+        }
+
+    </script>
+</body>
+</html>
