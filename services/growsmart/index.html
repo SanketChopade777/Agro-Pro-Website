@@ -173,22 +173,22 @@
 
               <div class="crop_cultivation_calculator_form-group">
                   <label class="crop_cultivation_calculator_label" for="length">Length of Land:</label>
-                  <input class="crop_cultivation_calculator_input" type="number" id="length" required>
+                  <input class="crop_cultivation_calculator_input" type="number" min=0 id="length" required>
               </div>
 
               <div class="crop_cultivation_calculator_form-group">
                   <label class="crop_cultivation_calculator_label" for="width">Width of Land:</label>
-                  <input class="crop_cultivation_calculator_input" type="number" id="width" required>
+                  <input class="crop_cultivation_calculator_input" type="number" min=0 id="width" required>
               </div>
 
               <div class="crop_cultivation_calculator_form-group">
                <label class="crop_cultivation_calculator_label" for="border">Border:</label>
-               <input class="crop_cultivation_calculator_input" type="number" id="border" required>
+               <input class="crop_cultivation_calculator_input" type="number" min=0 id="border" required>
               </div>
 
               <div class="crop_cultivation_calculator_form-group">
                   <label class="crop_cultivation_calculator_label" for="unit">Land Unit:</label>
-                  <select class="crop_cultivation_calculator_select" id="unit" required>
+                  <select class="crop_cultivation_calculator_select" min=0 id="unit" required>
                       <option value="cm">Centimeter (cm)</option>
                       <option value="m">Meters (m)</option>
                       <option value="inch">Inch (inch)</option>
@@ -199,19 +199,19 @@
 
               <div class="crop_cultivation_calculator_form-group">
                   <label class="crop_cultivation_calculator_label" for="spacing">Spacing Between Plants (Plant to Plat Distance):</label>
-                  <input class="crop_cultivation_calculator_input" type="number" id="spacing" required>
+                  <input class="crop_cultivation_calculator_input" type="number" min=0 id="spacing"  required>
               </div>
               
            
            <div id="pairedRowInputs" style="display: none;">
                <div class="crop_cultivation_calculator_form-group">
                    <label class="crop_cultivation_calculator_label" for="pairedRowDistance">Paired Row Distance:</label>
-                   <input class="crop_cultivation_calculator_input" type="number" id="pairedRowDistance">
+                   <input class="crop_cultivation_calculator_input" type="number" min=0 id="pairedRowDistance">
                </div>
            
                <div class="crop_cultivation_calculator_form-group">
                    <label class="crop_cultivation_calculator_label" for="interRowDistance">Interrow Distance:</label>
-                   <input class="crop_cultivation_calculator_input" type="number" id="interRowDistance">
+                   <input class="crop_cultivation_calculator_input" type="number" min=0 id="interRowDistance">
                </div>
            </div>
            
@@ -230,7 +230,7 @@
 
             <div class="crop_cultivation_calculator_form-group">
                <label class="crop_cultivation_calculator_label" for="spacingUnit">Distances Unit:</label>
-               <select class="crop_cultivation_calculator_select" id="spacingUnit" required>
+               <select class="crop_cultivation_calculator_select" min=0 id="spacingUnit" required>
                   <option value="cm">Centimeter (cm)</option>
                   <option value="m">Meters (m)</option>
                   <option value="inch">Inch (inch)</option>
