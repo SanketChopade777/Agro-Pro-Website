@@ -1,0 +1,142 @@
+/* General styles */
+.crop_cultivation_calculator_container1 {
+  font-family: 'Arial', sans-serif;
+  background-color: #d3f4af;
+  margin: 0;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Form container */
+.crop_cultivation_calculator_container2 {
+  background-color: rgba(172, 248, 110, 0.9);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  width: 450px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.crop_cultivation_calculator_container2:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.crop_cultivation_calculator_h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #2c3e50;
+}
+
+/* Form elements */
+.crop_cultivation_calculator_form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.crop_cultivation_calculator_label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #444;
+}
+
+.crop_cultivation_calculator_input, 
+.crop_cultivation_calculator_select {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.crop_cultivation_calculator_input:focus, 
+.crop_cultivation_calculator_select:focus {
+  border-color: #28a745;
+  box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+  outline: none;
+}
+
+/* Buttons */
+.crop_cultivation_calculator_button {
+  width: 100%;
+  padding: 12px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out, transform 0.2s;
+  margin-bottom: 10px;
+}
+
+.crop_cultivation_calculator_button:hover {
+  background-color: #218838;
+  transform: translateY(-3px);
+}
+
+/* Result section */
+.crop_cultivation_calculator_result {
+  display: none;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #ffffff;
+  border: 2px solid #28a745;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  width: 400px;
+  max-height: 300px;
+  overflow-y: auto;
+  text-align: center;
+}
+
+/* Example section */
+#crop_cultivation_calculator_example {
+  display: none;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #fff3cd;
+  border: 2px solid #ffc107;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #856404;
+  width: 400px;
+  max-height: 300px;
+  overflow-y: auto;
+  text-align: left;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .crop_cultivation_calculator_container2, 
+  .crop_cultivation_calculator_result,
+  #crop_cultivation_calculator_example {
+      width: 95%;
+      padding: 20px;
+  }
+
+  .crop_cultivation_calculator_h1 {
+      font-size: 24px;
+  }
+
+  .crop_cultivation_calculator_input, 
+  .crop_cultivation_calculator_select {
+      font-size: 14px;
+      padding: 8px;
+  }
+
+  .crop_cultivation_calculator_button {
+      font-size: 14px;
+      padding: 10px;
+  }
+}

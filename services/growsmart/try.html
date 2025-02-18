@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Population Calculator</title>
+    <script>
+        function calculatePopulation() {
+            let area = parseFloat(document.getElementById("area").value);
+            let plantDistance = parseFloat(document.getElementById("plantDistance").value);
+            let rowDistance = parseFloat(document.getElementById("rowDistance").value);
+            let method = document.getElementById("method").value;
+            let population = 0;
+            
+            if (method === "standard") {
+                population = area / (rowDistance * plantDistance);
+            } else if (method === "paired") {
+                let interRowDistance = parseFloat(document.getElementById("interRowDistance").value);
+                let meanDistance = (rowDistance + interRowDistance) / 2;
+                population = area / (meanDistance * plantDistance);
+            }
+            
+            document.getElementById("result").innerText = "Estimated Plant Population: " + Math.round(population);
+        }
+        
+        function toggleFields() {
+            let method = document.getElementById("method").value;
+            let interRowField = document.getElementById("interRowField");
+            if (method === "paired") {
+                interRowField.style.display = "block";
+            } else {
+                interRowField.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Plant Population Calculator</h2>
+    <label for="method">Select Planting Method:</label>
+    <select id="method" onchange="toggleFields()">
+        <option value="standard">Standard Planting</option>
+        <option value="paired">Paired Row Planting</option>
+    </select>
+    <br><br>
+    <label for="area">Total Area (sq.m):</label>
+    <input type="number" id="area" required>
+    <br><br>
+    <label for="rowDistance">Row Distance (m):</label>
+    <input type="number" id="rowDistance" required>
+    <br><br>
+    <label for="plantDistance">Plant Distance (m):</label>
+    <input type="number" id="plantDistance" required>
+    <br><br>
+    <div id="interRowField" style="display: none;">
+        <label for="interRowDistance">Inter-Row Distance (m):</label>
+        <input type="number" id="interRowDistance">
+        <br><br>
+    </div>
+    <button onclick="calculatePopulation()">Calculate</button>
+    <h3 id="result"></h3>
+</body>
+</html>
