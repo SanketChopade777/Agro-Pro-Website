@@ -7,7 +7,7 @@
     <!-- mobile metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-    <title>Agro-Pro | Gallery | Team Indra</title>
+    <title>Agro-Pro | Plant-Information | Team Indra</title>
     <!-- favicon -->
     <link rel="icon" href="images/favicon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
@@ -30,70 +30,130 @@
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
     <link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 0;
+        .plant-container {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 20px;
+          background-color: #e9f5e9;
+        }
+  
+        .plant-header {
+           font-size: 35px;
+           font-weight: bold;
+          text-align: center;
+          color: #2e7d32;
+        }
+  
+        #searchBar {
+          display: block;
+          margin: 0 auto 20px auto;
+          width: 80%;
+          max-width: 400px;
+          padding: 10px;
+          font-size: 16px;
+          border: 2px solid #a5d6a7;
+          border-radius: 5px;
+        }
+  
+        .plant-gallery {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 20px;
+        }
+  
+        .plant-card {
+          background-color: white;
+          border-radius: 10px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+          padding: 15px;
+          text-align: center;
+          width: 220px;
+          transition: transform 0.2s ease;
+        }
+  
+        .plant-card:hover {
+          transform: scale(1.05);
+        }
+  
+        .plant-card img {
+          width: 100%;
+          height: 160px;
+          object-fit: cover;
+          border-radius: 8px;
+        }
+  
+        .plant-card h2 {
+          font-weight: bold;
+          font-size: 18px;
+          color: #388e3c;
+          margin: 10px 0;
+        }
+         /* Modal Background Overlay */
+         .plantModal-design {
+         display: none;
+         position: fixed;
+         z-index: 1000;
+         left: 0;
+         top: 0;
+         width: 100vw;
+         height: 100vh;
+         background-color: rgba(0, 0, 0, 0.5);
+         justify-content: center;
+         align-items: center;
+         overflow: auto; /* Allow scrolling if modal content is tall */
+         padding: 20px; /* Some space around modal content on small screens */
+         }
+
+         /* Modal Box */
+         #modal-content {
+         background-color: white;
+         padding: 25px;
+         border-radius: 15px;
+         width: 100%;
+         max-width: 500px;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+         position: relative;
+         animation: fadeIn 0.3s ease;
+         color: black;
+         max-height: 90vh; /* Prevents modal from exceeding screen height */
+         overflow-y: auto; /* Scroll inside modal if content overflows */
+         }
+
+         @keyframes fadeIn {
+         from { opacity: 0; transform: scale(0.95); }
+         to { opacity: 1; transform: scale(1); }
+         }
+
+        .close {
+        color: #aaa;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
         }
 
-        .gallery-header h1 {
-            letter-spacing: 0.1em;
-            margin-top: 30px;
-            margin-bottom: 30px;
-            padding: 20px;
-            background: linear-gradient(135deg, #ff7e5f, #feb47b);
-            color: white;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            /* width: 80px;
-            height: 80px; */
+        .modal-content ul {
+        padding-left: 20px;
         }
 
-        .gallery-header {
-            text-align: center;
-            font-size: 15px;
-            text-transform: uppercase;
-            
+        .modal-content li {
+        margin-bottom: 8px;
         }
 
-        .gallery-container {
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #e3f1d5; /* Box color */
-            border-radius: 15px;
-            max-width: 1200px;
-            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+  
+        @media (max-width: 600px) {
+          .plant-card {
+            width: 90%;
+          }
+  
+          #searchBar {
+            width: 80%;
+          }
         }
-
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .gallery img {
-            border-radius: 15px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            max-width: 250px;
-            height: 250px;
-            object-fit: cover;
-        }
-
-        .gallery img:hover {
-            transform: scale(1.05);
-            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        td {
-            padding: 5px;
-        }
-    </style>
+      </style>
 </head>
 <body>
     <body class="main-layout inner_page">
@@ -177,30 +237,93 @@
          </header>
            <!-- end header inner -->
         </div>
-    <!-- Gallery Header -->
-    <div class="gallery-header">
-        <h1>Gallery</h1>
-    </div>
+    <!-- Plant Information Container Box -->
+    <div class="plant-container">
+        <h1 class="plant-header">🌿 Plant Information</h1>
+        <br>
+        <input type="text" id="searchBar" placeholder="Search for a plant..." />
 
-    <!-- Gallery Container Box -->
-    <div class="gallery-container">
-        <div class="gallery">
-            <img src="imgallery/10.jpg" alt="Image 1">
-            <img src="imgallery/2.jpg" alt="Image 2">
-            <img src="imgallery/3.jpg" alt="Image 3">
-            <img src="imgallery/4.jpg" alt="Image 4">
-            <img src="imgallery/5.jpg" alt="Image 5">
-            <img src="imgallery/6.jpg" alt="Image 6">
-            <img src="imgallery/7.jpg" alt="Image 7">
-            <img src="imgallery/8.jpg" alt="Image 8">
-            <img src="imgallery/9.jpg" alt="Image 9">
-            <img src="imgallery/1.jpg" alt="Image 10">
-            <img src="imgallery/11.jpg" alt="Image 11">
-            <img src="imgallery/12.jpg" alt="Image 12">
-            <img src="imgallery/13.jpg" alt="Image 13">
-            <img src="imgallery/14.jpg" alt="Image 14">
-            <img src="imgallery/15.jpg" alt="Image 15">
-        </div>
+        <div class="plant-gallery" id="plantGallery"></div>
+
+        <!-- Modal -->
+        <div id="plantModal" class="plantModal-design">
+         <div id="modal-content">
+           <span class="close" onclick="closeModal()">&times;</span>
+           <h2 id="modalTitle"></h2>
+           <p id="modalDescription"></p>
+         </div>
+       </div>
+       
+ 
+
+        <!-- Load plant data -->
+        <script src="plantData.js"></script>
+
+        <script>
+        const gallery = document.getElementById("plantGallery");
+
+        function showDetails(plant) {
+            const modal = document.getElementById("plantModal");
+            document.getElementById("modalTitle").innerHTML = `<b>${plant.name}</b> (<i>${plant.scientific}</i>)`;
+            document.getElementById("modalDescription").innerHTML = `
+               <br>
+               <ul>
+                  <li><strong>Type:</strong> ${plant.type}</li>
+                  <li><strong>Climate:</strong> ${plant.climate}</li>
+                  <li><strong>Soil:</strong> ${plant.soil}</li>
+                  <li><strong>Water:</strong> ${plant.water}</li>
+                  <li><strong>Nutrients:</strong> ${plant.nutrients}</li>
+                  <li><strong>Duration:</strong> ${plant.duration}</li>
+                  <li><strong>Pests:</strong> ${plant.pests}</li>
+                  <li><strong>Practices:</strong> ${plant.practices}</li>
+                  <li><strong>Yield:</strong> ${plant.yield}</li>
+                  <li><strong>Harvest:</strong> ${plant.harvest}</li>
+                  <li><strong>Storage:</strong> ${plant.storage}</li>
+                  <li><strong>Plant Spacing:</strong> ${plant.plantSpacing}</li>
+                  <li><strong>Watering Schedule:</strong> ${plant.wateringSchedule}</li>
+                  <li><strong>Farming Procedure:</strong> ${plant.farmingProcedure}</li>
+                  <li><strong>Precautions:</strong> ${plant.precautions}</li>
+               </ul>
+            `;
+            modal.style.display = "flex";
+            }
+
+            function closeModal() {
+               document.getElementById("plantModal").style.display = "none";
+            }
+
+
+
+        // Render cards
+        plantData.forEach((plant) => {
+            const card = document.createElement("div");
+            card.className = "plant-card";
+            card.innerHTML = `
+            <img src="${plant.image}" alt="${plant.name}">
+            <h2>${plant.name}</h2>
+            `;
+            card.addEventListener("click", () => showDetails(plant));
+            gallery.appendChild(card);
+        });
+
+        // Filter search
+        document.getElementById("searchBar").addEventListener("input", () => {
+            const query = document.getElementById("searchBar").value.toLowerCase();
+            const cards = document.querySelectorAll(".plant-card");
+            cards.forEach((card) => {
+            const name = card.querySelector("h2").textContent.toLowerCase();
+            card.style.display = name.includes(query) ? "block" : "none";
+            });
+        });
+
+       // Close modal when clicking outside
+         window.onclick = function (event) {
+            const modal = document.getElementById("plantModal");
+            if (event.target === modal) {
+               closeModal();
+            }
+         };
+        </script>
     </div>
      <!--  footer -->
      <footer>
