@@ -1393,7 +1393,7 @@ ul.social_icon li a i:hover {
 }
 
 .sticky-circle-button1 a .button1-text::before {
-  content: "⬇️"; /* Initial '?' displayed */
+  content: "⬇"; /* Initial '?' displayed */
 }
 
 .sticky-circle-button1 a:hover .button1-text::before {
