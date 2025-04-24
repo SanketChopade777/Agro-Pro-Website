@@ -1357,12 +1357,60 @@ ul.social_icon li a i:hover {
 /* sticky circular button-1 styles */
 .sticky-circle-button1 {
   position: fixed;
-  bottom: 80px;
+  bottom: 140px;
   right: 10px;
   z-index: 10000000000;
 }
 
 .sticky-circle-button1 a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #e67538; /* blue color for button */
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%; /* Circle */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.sticky-circle-button1 a:hover {
+  width: 200px;
+  height: 50px; /* Keep consistent height */
+  border-radius: 25px; /* Smoothly transition to rounded rectangle */
+  background-color: #e67538; /* blue color for hover effect */
+}
+
+.sticky-circle-button1 a .button1-text {
+  transition: all 0s ease-in-out;
+}
+
+.sticky-circle-button1 a .button1-text::before {
+  content: "📃"; /* Initial '?' displayed */
+}
+
+.sticky-circle-button1 a:hover .button1-text::before {
+  content: "View User Manual"; /* Change to full text on hover */
+  text-align: center; /* Ensure the text stays centered */
+  font-size: 16px; /* Slightly smaller font for consistency */
+}
+
+/* sticky circular button-2 styles */
+.sticky-circle-button2 {
+  position: fixed;
+  bottom: 80px;
+  right: 10px;
+  z-index: 10000000000;
+}
+
+.sticky-circle-button2 a {
   position: relative;
   display: flex;
   align-items: center;
@@ -1381,36 +1429,36 @@ ul.social_icon li a i:hover {
   overflow: hidden;
 }
 
-.sticky-circle-button1 a:hover {
+.sticky-circle-button2 a:hover {
   width: 200px;
   height: 50px; /* Keep consistent height */
   border-radius: 25px; /* Smoothly transition to rounded rectangle */
   background-color: #30a2df; /* blue color for hover effect */
 }
 
-.sticky-circle-button1 a .button1-text {
+.sticky-circle-button2 a .button2-text {
   transition: all 0s ease-in-out;
 }
 
-.sticky-circle-button1 a .button1-text::before {
+.sticky-circle-button2 a .button2-text::before {
   content: "⬇"; /* Initial '?' displayed */
 }
 
-.sticky-circle-button1 a:hover .button1-text::before {
+.sticky-circle-button2 a:hover .button2-text::before {
   content: "Download Mobile App"; /* Change to full text on hover */
   text-align: center; /* Ensure the text stays centered */
   font-size: 16px; /* Slightly smaller font for consistency */
 }
 
-/* sticky circular button-2 styles */
-.sticky-circle-button2 {
+/* sticky circular button-3 styles */
+.sticky-circle-button3 {
   position: fixed;
   bottom: 20px;
   right: 10px;
   z-index: 10000000000;
 }
 
-.sticky-circle-button2 a {
+.sticky-circle-button3 a {
   position: relative;
   display: flex;
   align-items: center;
@@ -1429,22 +1477,22 @@ ul.social_icon li a i:hover {
   overflow: hidden;
 }
 
-.sticky-circle-button2 a:hover {
+.sticky-circle-button3 a:hover {
   width: 160px;
   height: 50px; /* Keep consistent height */
   border-radius: 25px; /* Smoothly transition to rounded rectangle */
   background-color: #6a994e; /* Earthy green for hover effect */
 }
 
-.sticky-circle-button2 a .button2-text {
+.sticky-circle-button3 a .button2-text {
   transition: all 0s ease-in-out;
 }
 
-.sticky-circle-button2 a .button2-text::before {
+.sticky-circle-button3 a .button3-text::before {
   content: "?"; /* Initial '?' displayed */
 }
 
-.sticky-circle-button2 a:hover .button2-text::before {
+.sticky-circle-button3 a:hover .button3-text::before {
   content: "How to Use ?"; /* Change to full text on hover */
   text-align: center; /* Ensure the text stays centered */
   font-size: 16px; /* Slightly smaller font for consistency */
