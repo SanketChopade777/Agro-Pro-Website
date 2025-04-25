@@ -35,6 +35,9 @@ Follow the tutorial video below for a comprehensive walkthrough on how to use Ag
 - **Visit the AgroPro Website**:  
   [AgroPro Website](https://teamindra-agro-pro.netlify.app/) 🌐
 
+- **View the User Manual**:  
+  [User Manual](https://drive.google.com/file/d/19YBkVVKo-BtICNP_DzPVzWSYZByrt0RZ/view?usp=drive_link) 📃
+
 ## About Team Indra: 💡👨‍💻
 Team Indra is a group of innovative minds working towards bridging the gap between traditional farming and modern technology. We aim to enhance sustainability, productivity, and ease of farming through technological advancements. 🌿✨
 
